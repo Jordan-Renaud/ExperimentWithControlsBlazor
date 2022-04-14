@@ -31,8 +31,26 @@
             {
                 string valueToDisplay = $"Button #{buttonNumber}";
                 <button type="button" class="btn btn-secondary"
-                        @onclick="() => ButtonClick(valueToDisplay)">@buttonNumber</button>
+                        @onclick="() => ButtonClick(valueToDisplay)">
+                    @buttonNumber
+                </button>
             }
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            Pick a date:
+        </div>
+        <div class="col-sm-6">
+            <input type="date" @onchange="UpdateValue" />
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            Pick a color:
+        </div>
+        <div class="col-sm-6">
+            <input type="color" @onchange="UpdateValue" />
         </div>
     </div>
 </div>
